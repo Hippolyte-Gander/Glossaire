@@ -91,41 +91,42 @@ C'est lorsque l'on manipule des objets (possédant des caractéristiques) via de
 On la déclare vace "class NomClasse {}". C'est une manière de définir les caractéristiques d'un objet.
 
 45.	Qu’est-ce qu’un objet ?
+C'est une instance appartenant à une classe.
 
-46.	Définir la notion de propriété / attribut / méthode
+47.	Définir la notion de propriété / attribut / méthode
 propriété : nature d'une valeur (srting / int /float / DateTime etc)
-attibut :
+attribut : ce sont les valeurs qui composent une classe
 méthode : succession d'opération effectuée sur une ou plusieurs variables, doit toujours retourner  quelque chose.
 
-47.	Qu’est-ce que la visibilité d’une propriété ou d’une méthode ? Citer les différents types de visibilité
+48.	Qu’est-ce que la visibilité d’une propriété ou d’une méthode ? Citer les différents types de visibilité
 C'est son accessibilité.
 Private = non accessible en dehors de la classe
 Protected = accessible uniquement par la classe qui hérite de la caractéristique
 Public = accessible de n'importe où par n'importe qui
 
-48.	Quelle est la méthode spécifique utilisée pour créer un nouvel objet à partir d’une classe ?
+49.	Quelle est la méthode spécifique utilisée pour créer un nouvel objet à partir d’une classe ?
 
-49.	Qu’est-ce que l’encapsulation ?
+50.	Qu’est-ce que l’encapsulation ?
 
-50.	Que signifie « étendre une classe » ? Quelle est le concept clé mis en œuvre ? Donner un exemple
+51.	Que signifie « étendre une classe » ? Quelle est le concept clé mis en œuvre ? Donner un exemple
 
-51.	Définir l’opérateur de résolution de portée
+52.	Définir l’opérateur de résolution de portée
 
-52.	Définir une méthode / propriété statique
+53.	Définir une méthode / propriété statique
 
-53.	Définir le polymorphisme en POO
+54.	Définir le polymorphisme en POO
 
-54.	Définir une méthode / classe abstraite ?
+55.	Définir une méthode / classe abstraite ?
 
-55.	Définir le chaînage de méthodes
+56.	Définir le chaînage de méthodes
 
-56.	Qu’est-ce que la méthode __toString() ? Existe-t-il d’autres méthodes « magiques »
+57.	Qu’est-ce que la méthode __toString() ? Existe-t-il d’autres méthodes « magiques »
 
-57.	Qu’est-ce qu’un « autoload » ?
+58.	Qu’est-ce qu’un « autoload » ?
 
-58.	Comment appelle-t-on en français les « getters » et les « setters » ?
+59.	Comment appelle-t-on en français les « getters » et les « setters » ?
 
-59.	Qu’est-ce que la sérialisation en PHP ? 
+60.	Qu’est-ce que la sérialisation en PHP ? 
 
 ## Architecture 
 60.	Qu’est-ce que l’architecture client / serveur ? Grâce à quel type de requête peut-on interroger le serveur. Définir l’acronyme de ce type de requête. Si on ajoute un « S » à cet acronyme, expliquer la différence
