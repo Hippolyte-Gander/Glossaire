@@ -96,19 +96,25 @@ session_start() permet de démarrer une session.
 C'est une information stockée sur le navigateur du client. Cela peut être des préférences de site ou des identifiants de session.
 
 13.	Quelle est la différence entre les instructions « require » et « include » en PHP
-
+Dans le cas où le fichier n'est pas trouvé, REQUIRE déclenche une fatal error alors que INCLUDE n'empêche pas le fonctionnement du script.
 
 14.	Comment effectuer une redirection en PHP ?
-
+header("Location: https://www.example.com/nouvelle_page.php");
+exit();
+A mettre tout en haut de la page !
 
 15.	Définir la partie « front-end » et « back-end » d’une application
-
+Le front est tout le visuel, l'affichage et l'organisation des éléments à l'écran (HTML, CSS et JS par exemple). C'est la partie visible par l'utilisateur.
+Le back c'est tout ce qui touche à la gestion des données, requêtes, authentification et échange avec un base de données.
 
 16.	Définir le contrôle de version ? Qu’est-ce que Git ?
-
+C'est un moyen de modifier des fichiers par plusieurs personnes en même temps, à distance, et d'en faire des backups des anciennes versions.
+Git est le système de contrôle de version le plus utilisé.
 
 17.	Qu’est-ce qu’un CMS ? Citer au moins 2 exemples
-
+Un CMS (Content Management System)  est une plateforme logicielle accessible à ceux ayant peu de connaissances en programmation. Elle s'occupe du front comme du back.
+WordPress, Salesforce Experience Cloud, Joomla, Shopify, Drupal.
+NE PAS CONFONDRE AVEC LES FRAMEWORKS CSS (Bootstrap, Tailwind CSS ou Ulkit).
 
 
 ## Front-end
