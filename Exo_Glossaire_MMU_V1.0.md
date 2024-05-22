@@ -59,19 +59,41 @@ SWITCH
 $jour = "férié";
 switch($jour){
     case "férié":
-        echo "On ne travail pas"
+        echo "On ne travaille pas";
+        breal;
+    case "non férié":
+        echo "On travaille";
+        breal;
+}
+
+FOR
+for ($i=0; $i<10; $i++) [
+    echo "On a ajouté 1 à $i";
+]
+
+WHILE
+while ($i > 10){
+    echo "On a enlevé 1 à $i";
+    $i--;
+}
+
+FOREACH
+$array = ["Toyota", "Mercedes", "Citroën"];
+foreach($array as $voiture){
+    echo "La voiture est une " . $voiture "\n";
 }
 
 
-
 10.	Quelle est la fonction PHP permettant de demander la longueur d’une chaîne de caractères ?
-
+strlen()
 
 11.	Qu’est-ce qu’une session ? Quelle fonction permet de démarrer une session en PHP ? Donner un exemple d’utilisation en PHP
-
+Une session est accessible grâce à la superglobale $_SESSION. Elle permetde conserver des informations (comme les variables) à travers plusieurs pages web.
+session_start() permet de démarrer une session.
+?
 
 12.	Qu’est-ce qu’un cookie ? Donner un exemple d’utilisation en PHP
-
+C'est une information stockée sur le navigateur du client. Cela peut être des préférences de site ou des identifiants de session.
 
 13.	Quelle est la différence entre les instructions « require » et « include » en PHP
 
