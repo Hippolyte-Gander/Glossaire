@@ -17,16 +17,16 @@
 Il faut un logiciel d'éditeur de code (un éditeur de texte pourrait aussi fonctionner), un serveur web et un interpréteur  PHP(Laragon ou XAMPP font les 2).
 
 2.	Qu’est-ce qu’un algorithme ?
-Ensemble d'opérations, généralement successives.
+Ensemble d'opérations, généralement successives, permettant d'obtenir un résultat en fonction d'éléments fournis en entrée.
 
 3.	Qu’est-ce qu’une variable ? Par quel symbole est préfixée une variable en PHP ?
 C'est une donnée qui peut être par exemple un entier, une chaîne de caractères ou un array / tableau. Elle stocke cette valeur mais peut être modifiée. symbole : $
 
 4.	Qu’est-ce que la portée d’une variable ?
-Ce sont les endroits d'où la variable est accessible.
+Ce sont les endroits d'où la variable est accessible, plus précisémment l'espace du script dans lequel elle va être accessible. Par exemple une valeur déclarée dans une boucle IF ne sera accessible qu'à l'intérieur de celle-ci.
 
 5.	Qu’est-ce qu’une constante ? Quelle est la différence avec une variable ?
-Ce sont des variables non modifiables.
+La variable est une valeur qui peut par la suite être modifiée, une constante est une valeur non modifiable une fois déclarée.
 
 6.	Qu’est-ce qu’une superglobale, combien en existent-ils et donner un exemple d’utilisation 
 Il en existe 9 : $GLOBALS $_SERVER $_GET $_POST $_FILES $_COOKIE $_SESSION $_REQUEST $_ENV
@@ -44,7 +44,8 @@ NULL : variable sans valeur ("null")
 Ressource : resssources externes (ex: mysqli_connect()).
 
 8.	Existe-t-il plusieurs types de tableaux en PHP, si oui lesquels ?
-Les tableaux "basiques" et les tableaux associatifs : $assArray = ["Audi"=>"Q5", "BMW"=>"Serie 1"].
+Les tableaux "basiques" qui contiennent plusieurs valeurs : ['Ford', 'BMW']
+Et les tableaux associatifs qui ont une clef associée à une valeur selon le modèle "clef"=>"valeur" : $assArray = ["Audi"=>"Q5", "BMW"=>"Serie 1"].
 
 9.	Quelles sont les différentes structures de contrôles qu’il existe en algorithmie ? Donner un exemple pour chacune d’entre elles
 IF / ESLSE IF / ELSE 
@@ -93,7 +94,7 @@ session_start() permet de démarrer une session.
 ?
 
 12.	Qu’est-ce qu’un cookie ? Donner un exemple d’utilisation en PHP
-C'est une information stockée sur le navigateur du client. Cela peut être des préférences de site ou des identifiants de session.
+C'est une information stockée sur le navigateur du client. Cela peut être des préférences de site ou des identifiants de session. Un cookie peut par exemple stocker l'id d'un user afin de l'identifier pendant sa navigation sur le site.
 
 13.	Quelle est la différence entre les instructions « require » et « include » en PHP
 Dans le cas où le fichier n'est pas trouvé, REQUIRE déclenche une fatal error alors que INCLUDE n'empêche pas le fonctionnement du script.
@@ -119,32 +120,39 @@ NE PAS CONFONDRE AVEC LES FRAMEWORKS CSS (Bootstrap, Tailwind CSS ou Ulkit).
 
 ## Front-end
 18.	Définir HTML
-C'est un langage de programmation qui gère le contenu d'une page web
+C'est un langage de balisage qui permet de gérer le contenu d'une page web.
 
 19.	Définir CSS.
-C'est un langage de programmation qui gère l'esthétique / le rendu visuel de la page.
+C'est un langage de programmation qui gère l'esthétique / le rendu visuel de la page, c'est à dire sa mise en forme et mise en page.
 
 20.	Définir Javascript
+C'est un langage permettant d'ajouter de l'interactivité avec l'utilisateur. Il permet également de faire des effet de style et des animations.
 
 
 21.	Définir JSON. Dans quel contexte ce format est-il utilisé ? 
+JavaScript Object Notation, c'est un format de donnée textuel
 
 22.	Peut-on interpréter du Javascript côté serveur ? Si oui, comment ?
+Oui grâce à l'environnement Node.js, une plateforme open-source qui permet de d'utiliser un seul langage pour le navigateur et le serveur.
 
 23.	Qu’est-ce qu’un sélecteur CSS ?
-C'est ce qui permet de sélectionner un élément ou un groupe d'éléments ou un classe afin de modifier par la suite leur caractéristiques. Par exemple h1 pour tous les gros titres ou .classe pour une classe en particulier.
+C'est ce qui permet de sélectionner un élément ou un groupe d'éléments ou un classe afin de modifier par la suite leur caractéristiques. Par exemple h1 pour tous les gros titres ou .classe pour une classe en particulier et #id pour un élément unique.
 
 24.	Quelle balise HTML permet de créer un lien hypertexte ?
-La balise <a href="link"></a>. On peut rajouter target="_blank" pour que le lien s'ouvre dans un nouvel onglet.
+La balise 'anchor' a : <a href="link"></a>. On peut rajouter target="_blank" pour que le lien s'ouvre dans un nouvel onglet.
 
 25.	Qu’est-ce qu’une requête AJAX ?
+Asynchronous JavaScript And XML, c'est une technique qui permet à une page web de communiquer avec un serveur en arrière-plan sans avoir besoin de recharger la page entière.
+-> mettre à jour des éléments d'une page sans recharger la page.
+
 26.	Quel sélecteur CSS permet de sélectionner tous les éléments d’une classe spécifique ? D’un identifiant spécifique ?
-.classe pour un classe et #id pour l'identifiant.
+le point . une classe et # pour l'identifiant.
 
 27.	Définir le responsive design
-C'est  un affichage qui s'adapte à la taille de l'écran sur lequel il est affiché (mobile, tablette, pc).
+C'est  un affichage qui s'adapte à la taille de l'écran sur lequel il est affiché (mobile, tablette, pc ou autre). Responsive c'est un affichage progressif.
 
 28.	Qu’est-ce que le templating ?
+Template en agnlais signifie modèle ou schéma. C'est une base qui peut se réutiliser ou se modifier (principalement pour des pages HTML).
 
 29.	Qu’est-ce qu’une fonction anonyme en Javascript ?
 
