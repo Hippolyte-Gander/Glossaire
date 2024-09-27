@@ -260,25 +260,29 @@ C'est un méthode accessible sans avoir à instancier la classe. Elle est associ
 
 54.	Définir le polymorphisme en POO
 Fonction polymorphe = fonction qui peut appeler plusieurs types d'objets.
-Ex:
-Une fonction qui peut afficher plusieurs objets de classe différente ? (si j'ai bien compris)
+Ex:une fonction qui peut afficher plusieurs objets de classe différente ? (si j'ai bien compris)
 
 55.	Définir une méthode / classe abstraite ?
-
+Une classe abstraite est marquée du mot "abstract". Elle ne permet pas d'instancier des objets et n'est pas insctanciée.
+Elle contient des méthodes qui peuvent être utilisées dans les classes dérivées.
+-> pas très clair pour moi
 
 56.	Définir le chaînage de méthodes
-
+C'est le fait d'appeler plusieurs méthodes à la suite par exemple sur un même objet pour le modifier plusieurs fois.
 
 57.	Qu’est-ce que la méthode __toString() ? Existe-t-il d’autres méthodes « magiques »
-
+C'est une méthode permettant d'obtenir une chaîne de caractères lorsqu'on appelle l'objet avec un echo.
 
 58.	Qu’est-ce qu’un « autoload » ?
-
+C'est une ligne de code qui permet de charger une classe sans avoir à mettre un require à chaque fois qu'une méthode de la classe est utilisée.
 
 59.	Comment appelle-t-on en français les « getters » et les « setters » ?
+Ce sont les méthodes d'une classe permettant d'accéder à ses propriétés en dehors de celle-ci.
+Get = chercher / obtenir la valeur d'une propriété
+Set = modifier la valeur d'une propriété
 
-
-60.	Qu’est-ce que la sérialisation en PHP ? 
+60.	Qu’est-ce que la sérialisation en PHP ?
+C'est convertir une variable en une suite d'informations plus petites pour la sauvegarder en BDD ou l'upload.
 
 
 ## Architecture 
