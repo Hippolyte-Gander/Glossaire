@@ -217,141 +217,275 @@ C'est le fait de réaliser les maquettes en créant d'abord la version mobile d'
 
 ## Programmation orientée objet (POO)
 43.	Donner une définition de la programmation orientée objet 
+
 C'est lorsque l'on manipule des objets (possédant des caractéristiques) via des classes.
 
 44.	Qu’est-ce qu’une classe ? Comment la déclare-t-on ?
+
 On la déclare avec "class NomClasse {}". C'est une manière de définir les caractéristiques d'un objet -> des attributs et des méthodes.
 
 45.	Qu’est-ce qu’un objet ?
+
 C'est une instance appartenant à une classe.
 
 47.	Définir la notion de propriété / attribut / méthode
+
 propriété : nature d'une valeur (srting / int /float / DateTime etc)
 attribut : ce sont les valeurs qui composent une classe (ex nom, date de naissance)
 méthode : succession d'opération effectuée sur une ou plusieurs variables, doit toujours retourner  quelque chose.
 
 48.	Qu’est-ce que la visibilité d’une propriété ou d’une méthode ? Citer les différents types de visibilité
+
 C'est son accessibilité.
 Private = non accessible en dehors de la classe
 Protected = accessible uniquement par la / les classe(s) qui hérite de la caractéristique
 Public = accessible de n'importe où par n'importe qui
 
 49.	Quelle est la méthode spécifique utilisée pour créer un nouvel objet à partir d’une classe ?
+
 __construct()
 
 50.	Qu’est-ce que l’encapsulation ?
+
 C'est le regroupement de données avec un ensemble de routines qui en permettent la lecture et la manipulation -> cela sert à empêcher que certaines propriétés d'une classe ne soit accessible en dehors de celle-ci.
 
 51.	Que signifie « étendre une classe » ? Quelle est le concept clé mis en œuvre ? Donner un exemple
+
 C'est le concept d'héritage. une classe qui est étendue d'une autre possédera les mêmes propriétés ainsi que l'accès aux méthode de celle-ci.
 Exemple:
 On a une classe voiture qui a comme attributs "marque" "modèle" et "année".
 On crée une classe Voiture électrique extends Voiture, qui a comme attributs "autonomie" et "puissance". Un objet voiture éléctrique pourra donc avoir, sans être déclarés dans la classe, une marque un modèle et une année et aurra accès aux méthodes de la classe Voiture (ex: getModele()).
 
 52.	Définir l’opérateur de résolution de portée
+
 C'est un moyen d'accéder aux éléments d'une classe (ou de l'une de ses classes parentes). il s'agit du double points ::
 Ex:
 $form = $this->createForm(CommentaireType::class, $commentaire);
 
 53.	Définir une méthode / propriété statique
-C'est un méthode accessible sans avoir à instancier la classe. Elle est associée à la classe elle-même et non aux objets de la classe
+
+C'est un méthode accessible sans avoir à instancier la classe. Elle est associée à la classe elle-même et non aux objets de la classe. Par opposition, une méthode d'instance agit sur un objet.
 
 -> pas très clair pour moi
 
 54.	Définir le polymorphisme en POO
+
 Fonction polymorphe = fonction qui peut appeler plusieurs types d'objets.
 Ex:une fonction qui peut afficher plusieurs objets de classe différente ? (si j'ai bien compris)
 
 55.	Définir une méthode / classe abstraite ?
+
 Une classe abstraite est marquée du mot "abstract". Elle ne permet pas d'instancier des objets et n'est pas insctanciée.
 Elle contient des méthodes qui peuvent être utilisées dans les classes dérivées.
 -> pas très clair pour moi
 
 56.	Définir le chaînage de méthodes
+
 C'est le fait d'appeler plusieurs méthodes à la suite par exemple sur un même objet pour le modifier plusieurs fois.
 
 57.	Qu’est-ce que la méthode __toString() ? Existe-t-il d’autres méthodes « magiques »
+
 C'est une méthode permettant d'obtenir une chaîne de caractères lorsqu'on appelle l'objet avec un echo.
 
 58.	Qu’est-ce qu’un « autoload » ?
+
 C'est une ligne de code qui permet de charger une classe sans avoir à mettre un require à chaque fois qu'une méthode de la classe est utilisée.
 
 59.	Comment appelle-t-on en français les « getters » et les « setters » ?
+
 Ce sont les méthodes d'une classe permettant d'accéder à ses propriétés en dehors de celle-ci.
 Get = chercher / obtenir la valeur d'une propriété
 Set = modifier la valeur d'une propriété
 
 60.	Qu’est-ce que la sérialisation en PHP ?
+
 C'est convertir une variable en une suite d'informations plus petites pour la sauvegarder en BDD ou l'upload.
 
 
 ## Architecture 
 60.	Qu’est-ce que l’architecture client / serveur ? Grâce à quel type de requête peut-on interroger le serveur. Définir l’acronyme de ce type de requête. Si on ajoute un « S » à cet acronyme, expliquer la différence
 
+C'est un modèle de conception dans lequel les tâches sont réparties entres les clients et les serveurs.
+HTTP (Hypertext Transfer Protocol)
+Le S qu'on peut trouver en plus veut dire 'Secure'.
+Le protocole HTTPS utiliser un chiffrement lors des échanges de données ce  qui rend difficle leur interception.
+
 61.	Donner la définition d’un design pattern. Citer au moins 3 exemples de design pattern
+
+Ce sont des solutions à des problèmes récurrents en programmmation. Ce sont des solutions standardisées réutilisables.
+- Singleton
+- Factory Method
+- Observer
 
 62.	Qu’est-ce que l’architecture MVC ?
 
+L'architecture Model View Controller est un modèle de conception qui sépare l'application en 3 composants (Modèle, Vue et Controlleur).
+
 63.	Quel est le rôle de chaque couche du design pattern MVC : Model, View, Controller ?
+
+Modèle : gère les données (ajouts / edit / suppression) en interagissant avec la BDD.
+Vue : génère la vue qui sera affichée pour l'utilisateur
+Controlleur : réagit à l'action de l'utilisateur puis communique avec la vue pour envoyer le bon affichage, il communique également avec le modèle pour obtenir les données à afficher ou les modifier.
 
 64.	Quels sont les avantages de l’architecture MVC ?
 
+- facile à modifier
+- séparation distincte des composants
+- très répandu, surtout parmis les frameworks
+- facile à tester
+
 65.	Existe-t-il des variantes à l’architecture MVC ?
+
+- MVP (Model-View-Presenter)
+- MVVM (Model-View-ViewModel)
+-HMVC (Hierarchical Model-View-Controller)
 
 66.	Qu’est-ce qu’une API ? Définir l’architecture REST
 
+Application Programming Interface :
+Ensemble de règles et de protocoles qui permet à des applications de communiquer entre elles. Elles permettent notamment d'accéder à des services ou des bibliothèques.
+
+REST (Representational State Transfer) : style architectural de conception d'API web.
+
 ## Modélisation - Base de données
 67.	Qu’est-ce que la modélisation de données ? Définir la méthode Merise
+
+La modélisation des données est le processus de description de la structure, des associations, des relations et des contraintes relatives aux données disponibles. 
+
+C'est une méthode d'analyse, de conception et de gestion de projet informatique.
+Elle comprend 3 niveaux de modélisation :
+- niveau conceptuel -> MCD (Modèle conceptuel de données)
+- niveau logique -> MLD (Modèle logique de données)
+- niveau physique -> choix du type de données etc
+
 68.	Quelles sont les 3 étapes principales de la méthode Merise ? 
 a.	Analyse, conception et réalisation
 b.	Planification, exécution et contrôle
 c.	Création, modification et suppression
+
 69.	Qu’est-ce qu’un modèle conceptuel de données (MCD) en Merise ?
+
 70.	Qu’est-ce qu’un modèle logique de données (MLD) en Merise ?
+
 71.	Donner la définition des mots suivants :
+
 a.	Entité
 b.	Relation
 c.	Cardinalité
 d.	Clé primaire / clé étrangère
 72.	Que devient une relation de type « Many To Many » dans le modèle logique de données ?
+
 73.	Qu’est-ce qu’une base de données ?
+
 74.	Définir les notions suivantes : 
+
 a.	SQL
+
 b.	MySQL
+
 c.	SGBD (donner 2 exemples de SGBD)
+Système de gestion de base de données
+
 75.	Dans une base de données, les données sont stockées dans des ___. Celles-ci sont constituées de lignes appelées ___ et de colonnes appelées ___
+
 76.	Quelle est la différence entre une base de données relationnelle et non relationnelle ?
+
 77.	Qu’est-ce qu’une jointure dans une base de données ? En existe-t-il plusieurs ? Si oui lesquelles ?
+
 78.	A quoi sert une vue dans une base de données ?
+
 79.	Qu’est-ce que l’intégrité référentielle dans une base de données ?
+
 80.	Quelles sont les fonctions d’agrégation en SQL ?
+
 81.	Qu’est-ce qu’un CRUD dans le contexte d’une base de données ?
+
 82.	Quelles sont les clauses qui permettent de :
+
 a.	Insérer un nouvel enregistrement dans une table
+
 b.	Modifier un enregistrement dans une table
+
 c.	Supprimer un enregistrement dans une table
+
 d.	Supprimer la base de données
+
 e.	Filtrer les résultats d’une requête SQL
+
 f.	Trier les résultats d’une requête SELECT
+
 g.	Regrouper les résultats d'une requête SELECT en fonction d'une colonne spécifique
+
 h.	Concaténer 2 chaînes de caractères 
+
 83.	Comment se connecter à une base de données en PHP ? Quelle est la classe native utilisée ?
+
 
 ## Symfony
 84.	Qu’est-ce que Symfony ?
+
+C'est un framework libre utilisé dans le développement  de sites web.
+
 85.	Sur quel langage de programmation et design pattern repose Symfony ? 
+
+C'est un framework PHP qui fonctionne avec un design pattern MVC.
+
 86.	Quelle est la dernière version en date de Symfony ?
+
+7.1
+
 87.	Qu’est-ce qu’un bundle ? 
+
+C'est un package similaire à un plugin permettant de modifier des fonctionnalités de base de Symfony ou d'en ajouter des nouvelles.
+
 88.	Quel est le moteur de template utilisé par défaut dans Symfony ?
+
+Twig
+
 89.	Qu’est-ce qu’un ORM ? Quel est son utilité et comment s’appelle-t-il au sein de Symfony ?
+
+Un ORM (Object-Relational Mapping) est une technique de programmation qui permet de simplifier l'accès à la base de données en manipulant des objets.
+-> évite d'avoir à écrire en permanence des requêtes SQL
+
+C'est Doctrine l'ORM de Symfony.
+
 90.	Qu’est-ce que l’injection de dépendances ? Quel est l’outil utilisé dans ce contexte et quel fichier contient l’intégralité des dépendances du projet ?
+
+L'injection de dépendances est une technique qui permet de donner à une classe tout ce dont elle a besoin (ses dépendances) sans que la classe ait à les créer elle-même.
+
+L'outils utilisé est le Container de services, il gère la configuration des services de l'application.
+
+C'est le fichier services.yaml et pour les bibliothèques externes il est joint au fichier composer.json
+
 91.	Que permet le bundle Maker au sein de Symfony ? 
+
+C'est un outil permettant de générer du code automatiquement (ex: il permet de créer une classe en entreant dans la console les différents attributs et relations de celle-ci sans avoir à coder).
+
 92.	Quel est le langage de requêtage exploité au sein d’un projet Symfony ?
+
+DQL (Doctrine Query Language) -> permet d'effectuer des requêtes sur des objets
+
 93.	Quel est le composant qui garantit l’authentification et l’autorisation des utilisateurs ?
+
+Security Component gère divers paramètres comme les formulaires de connexion ou les tokens JWT ainsi que les autorisations des utilisateurs.
 
 ## Sécurité
 94.	Qu’est-ce que l’injection SQL ? Comment s’en prémunir ?
+
+C'est une pratique malveillante qui consiste à effectuer une requête SQL dans une entrée utilisateur ou dans des paramètres d'URL afin de récupérer / modifier / supprimer des informations stockées en BDD.
+
+Pour s'en prémunir :
+- utiliser de requêtes préparées
+- filtrer + valider les entrées utilisateurs (ex: FILTER INPUT)
+- éviter les requêtes dynamiques (requêtes à partir d'entrée utilisateurs)
+-utiliser le  bundle maker de Symfony ->tout ça sera automatiquement inclu
+
 95.	Qu’est-ce que la faille XSS ? Comment s’en prémunir ?
+
+Exploiter la faille XSS (Cross-Site Scripting) consiste à injecter du code JS dans une page web pour cibler les autres utilisateurs. Ses utilisations sont nombreuses, il est par exemple possible de voler des jetons de session, voler des cookies, altérer du contenu etc.
+
+Pour s'en prémunir il est nécessaire de filter les entrées utilisateur. (ex: Filter input ou utiliser le bundle Maker)
+
 96.	Qu’est-ce que la faille CSRF ? Comment s’en prémunir ?
 97.	Définir l’attaque par force brute et l’attaque par dictionnaire
 98.	Existe-t-il d’autres failles de sécurité ? Citer celles-ci et expliquer simplement leur comportement
