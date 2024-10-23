@@ -484,13 +484,35 @@ Pour s'en prémunir :
 
 Exploiter la faille XSS (Cross-Site Scripting) consiste à injecter du code JS dans une page web pour cibler les autres utilisateurs. Ses utilisations sont nombreuses, il est par exemple possible de voler des jetons de session, voler des cookies, altérer du contenu etc.
 
-Pour s'en prémunir il est nécessaire de filter les entrées utilisateur. (ex: Filter input ou utiliser le bundle Maker)
+Pour s'en prémunir il est nécessaire de filtrer les entrées utilisateur. (ex: Filter input ou utiliser le bundle Maker de Symfony)
 
 96.	Qu’est-ce que la faille CSRF ? Comment s’en prémunir ?
+
+CSRF (Cross-Site Request Forgery)
+C'est une attaque qui utilise un utilisateur authentifié pour lui faire réaliser des actions à son insu.
+Pour s'en prémnuuir il faut utiliser des CSRF tokens (dans les forms créés par Symfony ils sont mis en place par défaut). Ces jetons doivent avoir une durée d'utilisation limitée.
+Il faut également éviter de passer des par des méthodes comme GET pour les actions importantes ou sensibles.
+
+
 97.	Définir l’attaque par force brute et l’attaque par dictionnaire
+
+L'attaque par force brut consiste à tester toutes les combinaisons de caractères possibles (moins il y a des caractères dans un mot de passe, plus il est simple à trouver).
+L'attaque par disctionnaire consiste à essaye une série de mot prédéfinis (ex : motdepasse). Peut être améliorée avec des informations sur le propriétaire du compte.
+
 98.	Existe-t-il d’autres failles de sécurité ? Citer celles-ci et expliquer simplement leur comportement
+
+- Mot de passe trop faible : vu plus haut.
+- DDoS (Distributed Denial of Service) vise à arrêter une application en la surchargeant de requêtes afin de saturer sa bande passante, ses processeurs ou sa mémoire.
+
 99.	A quoi servent l’authentification et l’autorisation dans un contexte d’application web ?
+
+L'authentification sert à vérifier l'identiter de l'utilisateur.
+L'autorisation consiste à accorder certains droits à un utilisateur (ex: accéder à des informations, modifier ou supprimer des éléments etc).
+
 100.	Définir la notion de hachage d’un mot de passe et citer des algorithmes de hachage
+
+Le 
+
 101.	Qu’est-ce qu’une politique de mots de passe forts ?
 102.	Qu’est-ce que l’hameçonnage ?
 103.	Définir la « validation des entrées »
